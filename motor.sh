@@ -2,7 +2,7 @@
 gpio mode -g 17 out
 gpio mode -g 27 input
 while true; do
- PINSTATE="$(gpio read -g read 27)"
+ PINSTATE="$(gpio -g read 27)"
  if [ ${PINSTATE} = "1" ]; then
   for i in {1..3}; do
    gpio write 0 1
